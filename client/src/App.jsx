@@ -1,18 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
-import Product from "./routes/Product";
-import NotFound from "./routes/NotFound";
+import Outlet from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="product/:id" element={<Product />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Outlet />
+    </div>
   );
 };
 
