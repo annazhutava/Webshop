@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import "./Navbar.scss";
 
 const Navbar = () => {
   return (
@@ -7,23 +8,31 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="navbar-left">
           <div className="item">
-            <Link to="/products">Shop</Link>
+            <Link className="navbar-link" to="/products">
+              Shop
+            </Link>
           </div>
           <div className="item">
-            <Link to="/">About</Link>
+            <Link className="navbar-link" to="/">
+              About
+            </Link>
           </div>
           <div className="item">
-            <Link to="/">Contact</Link>
+            <Link className="navbar-link" to="/">
+              Contact
+            </Link>
           </div>
         </div>
         <div className="navbar-center">
           <div className="item">
-            <Link to="/">Home</Link>
+            <Link className="navbar-link" to="/">
+              Home
+            </Link>
           </div>
         </div>
         <div className="navbar-right">
-          <div className="cartIcon">
-            <ShoppingCartOutlinedIcon />
+          <div className="cart-icon">
+            <ShoppingCartOutlinedIcon fontSize="small" />
             <span>0</span>
           </div>
         </div>
