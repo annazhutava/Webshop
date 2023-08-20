@@ -20,15 +20,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
-            gap: 7rem;
+            gap: 3rem;
 
-            
             span{
                 text-decoration: underline;
             }
 
             .item{
-                width: 100px;
+                width: 140px;
             }
         }
 
@@ -44,7 +43,6 @@
             span{
                margin-bottom: 5px;
             }
-            
         }
     }
 }
