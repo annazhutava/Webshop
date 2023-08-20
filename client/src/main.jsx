@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
-import Product from "./routes/Product";
-import NotFound from "./routes/NotFound";
-import Products from "./routes/Products.jsx";
+import Home from "./routes/Home/Home.jsx";
+import Product from "./routes/Product/Product.jsx";
+import NotFound from "./routes/NotFound/NotFound.jsx";
+import Products from "./routes/Products/Products.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

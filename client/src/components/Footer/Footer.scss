@@ -1,0 +1,50 @@
+.footer{
+    padding: 50px;
+    margin-top: 50px;
+    background-color: beige;
+
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        .left{
+            flex: 1;
+
+            span{
+                max-width: 20rem;
+            }
+        }
+
+        .right{
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 7rem;
+
+            
+            span{
+                text-decoration: underline;
+            }
+
+            .item{
+                width: 100px;
+            }
+        }
+
+        .item{
+            display: flex;
+            flex-direction: column;
+
+            p{
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            span{
+               margin-bottom: 5px;
+            }
+            
+        }
+    }
+}

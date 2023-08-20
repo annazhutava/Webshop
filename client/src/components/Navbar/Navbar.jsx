@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import "./Navbar.scss";
+import "../Navbar/Navbar.scss";
 
 const Navbar = () => {
   return (
