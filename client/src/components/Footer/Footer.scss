@@ -1,7 +1,7 @@
 .footer{
     padding: 50px;
     margin-top: 50px;
-    background-color: beige;
+    background-color: #28282A;
     // position: fixed;
     bottom: 0;
     width: 100%;
@@ -10,13 +10,14 @@
     .wrapper{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center;     
 
         .left{
             flex: 1;
 
             span{
                 max-width: 20rem;
+                line-height: 18px;
             }
         }
 
@@ -28,24 +29,32 @@
 
             span{
                 text-decoration: underline;
+                text-underline-offset: 3.13px;
             }
 
             .item{
-                width: 140px;
+                width: 145px;
             }
         }
 
         .item{
             display: flex;
             flex-direction: column;
+            color: #ececec;
 
             p{
-                font-weight: bold;
                 margin-bottom: 20px;
+                font-family: "Archivo", sans-serif;
+                font-size: 14px;
+                font-weight: 800;
+                letter-spacing: -1.28px;
+                text-transform: uppercase;
             }
 
             span{
                margin-bottom: 5px;
+               font-size: 13px;
+               font-family: "Courier Prime", monospace;
             }
         }
     }
