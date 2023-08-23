@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import SliderImage1 from "../../assets/slider-image-1.jpg";
@@ -20,20 +20,20 @@ const Slider = () => {
     setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
   };
 
-  const handleScroll = (e) => {
-    if (e.deltaY > 0) {
-      nextSlide();
-    } else {
-      prevSlide();
-    }
-  };
+  // const handleScroll = (e) => {
+  //   if (e.deltaY > 0) {
+  //     nextSlide();
+  //   } else {
+  //     prevSlide();
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("wheel", handleScroll);
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  });
+  // useEffect(() => {
+  //   window.addEventListener("wheel", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("wheel", handleScroll);
+  //   };
+  // });
 
   return (
     <div className="slider">

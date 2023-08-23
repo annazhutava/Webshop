@@ -7,6 +7,7 @@ import Home from "./routes/Home/Home.jsx";
 import Product from "./routes/Product/Product.jsx";
 import NotFound from "./routes/NotFound/NotFound.jsx";
 import Products from "./routes/Products/Products.jsx";
+import About from "./routes/About/About.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route index element={<Home />} />
           <Route path="products" element={<Products />} />
           <Route path="product/:id" element={<Product />} />
+          <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
