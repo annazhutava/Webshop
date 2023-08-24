@@ -53,6 +53,9 @@ const Slider = () => {
           <KeyboardArrowRightIcon />
         </div>
       </div>
+      <div className="slider-number">
+        <p>{`0${0 + currentSlide + 1} - 0${data.length}`}</p>
+      </div>
     </div>
   );
 };
