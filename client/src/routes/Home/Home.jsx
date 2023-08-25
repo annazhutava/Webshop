@@ -1,3 +1,4 @@
+import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import IntroSection from "../../components/IntroSection/IntroSection";
 import Slider from "../../components/Slider/Slider";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Slider />
       <IntroSection />
+      <FeaturedProducts />
     </div>
   );
 };
