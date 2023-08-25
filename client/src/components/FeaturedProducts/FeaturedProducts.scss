@@ -43,15 +43,6 @@
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
-
-        .image{
-            display: flex;
-            gap: 10px;
-            img{
-             
-                height: 360px;
-                width: 240px;
-            }
-        }
+        gap: 10px;
     }
 }

@@ -1,10 +1,25 @@
 import FeaturedProduct1 from "../../assets/featured-product-1.jpg";
 import FeaturedProduct2 from "../../assets/featured-product-2.jpg";
 import FeaturedProduct3 from "../../assets/featured-product-3.jpg";
+import Card from "../Card/Card";
 import "../FeaturedProducts/FeaturedProducts.scss";
 
 const FeaturedProducts = () => {
-  const data = [FeaturedProduct1, FeaturedProduct2, FeaturedProduct3];
+  const data = [
+    {
+      id: 1,
+      img: FeaturedProduct1,
+    },
+    {
+      id: 2,
+      img: FeaturedProduct2,
+    },
+    {
+      id: 3,
+      img: FeaturedProduct3,
+    },
+  ];
+
   return (
     <div className="featured-products">
       <div className="left">
@@ -15,11 +30,9 @@ const FeaturedProducts = () => {
         </div>
       </div>
       <div className="right">
-        <div className="image">
-          {data.map((image, index) => (
-            <img key={index} src={image} alt="" />
-          ))}
-        </div>
+        {data.map((item) => (
+          <Card key={item.id} item={item} />
+        ))}
       </div>
     </div>
   );
