@@ -4,28 +4,33 @@ import Product3 from "../../assets/featured-product-3.jpg";
 import Card from "../Card/Card";
 import "../List/List.scss";
 
-const List = () => {
+const List = ({ selectedCategory }) => {
   const data = [
     {
       id: 1,
       img: Product1,
-      category: "Accessory",
+      category: "accessories",
     },
     {
       id: 2,
       img: Product2,
-      category: "Top",
+      category: "tops",
     },
     {
       id: 3,
       img: Product3,
-      category: "Top",
+      category: "tops",
     },
   ];
 
+  const filteredData =
+    selectedCategory === "all"
+      ? data
+      : data.filter((item) => item.category === selectedCategory);
+
   return (
     <div className="list">
-      {data.map((item) => (
+      {filteredData.map((item) => (
         <Card key={item.id} item={item} />
       ))}
     </div>

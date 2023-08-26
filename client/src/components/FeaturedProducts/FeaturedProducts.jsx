@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FeaturedProduct1 from "../../assets/featured-product-1.jpg";
 import FeaturedProduct2 from "../../assets/featured-product-2.jpg";
 import FeaturedProduct3 from "../../assets/featured-product-3.jpg";
@@ -26,7 +27,7 @@ const FeaturedProducts = () => {
         <hr />
         <h1>Featured products</h1>
         <div className="shop-btn">
-          <a href="/products/all">Shop featured</a>
+          <Link to="/products/all">Shop featured</Link>
         </div>
       </div>
       <div className="right">
