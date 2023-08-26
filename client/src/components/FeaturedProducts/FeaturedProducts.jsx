@@ -26,7 +26,7 @@ const FeaturedProducts = () => {
         <hr />
         <h1>Featured products</h1>
         <div className="shop-btn">
-          <a href="/products">Shop featured</a>
+          <a href="/products/all">Shop featured</a>
         </div>
       </div>
       <div className="right">

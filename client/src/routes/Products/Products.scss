@@ -1,0 +1,24 @@
+.products{
+  display: flex;
+    justify-content: space-between;
+    margin: 80px 50px 80px 50px;
+
+    .left{
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+
+        .categories{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+    }
+
+    .right{
+        flex: 3;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+}
