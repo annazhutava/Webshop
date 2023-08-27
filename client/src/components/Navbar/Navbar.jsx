@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "../Navbar/Navbar.scss";
 
@@ -8,26 +8,41 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="navbar-left">
           <div className="item">
-            <Link className="navbar-link" to="/products/all">
+            <NavLink
+              className={({ isActive }) =>
+                "nav-link" + (isActive ? " activated" : "")
+              }
+              to="/products/all"
+            >
               Shop
-            </Link>
+            </NavLink>
           </div>
           <div className="item">
-            <Link className="navbar-link" to="/about">
+            <NavLink
+              className={({ isActive }) =>
+                "nav-link" + (isActive ? " activated" : "")
+              }
+              to="/about"
+            >
               About
-            </Link>
+            </NavLink>
           </div>
           <div className="item">
-            <Link className="navbar-link" to="/">
+            <NavLink
+              className={({ isActive }) =>
+                "nav-link" + (isActive ? " activated" : "")
+              }
+              to="/contact"
+            >
               Contact
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navbar-center">
           <div className="item">
-            <Link className="navbar-link" to="/">
+            <NavLink className="nav-link" to="/">
               Home
-            </Link>
+            </NavLink>
           </div>
         </div>
         <div className="navbar-right">
