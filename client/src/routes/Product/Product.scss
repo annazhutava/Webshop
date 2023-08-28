@@ -7,9 +7,9 @@
 
     .product-description {
         position: sticky;
-        top: 30px; 
-        max-height: calc(100vh - 80px); 
-        overflow-y: auto; 
+        top: 30px;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .first-section {
@@ -22,7 +22,6 @@
             flex: 1;
 
             .images {
-              
 
                 img {
                     height: 790px;
