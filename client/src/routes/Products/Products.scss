@@ -27,7 +27,7 @@
     .right{
         flex: 3;
         display: flex;
-        justify-content: flex-end;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
