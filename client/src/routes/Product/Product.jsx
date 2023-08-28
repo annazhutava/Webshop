@@ -22,6 +22,7 @@ const Product = () => {
         <div className="left">
           <div className="images">
             <img src={Image1} alt="" />
+            <img src={Image2} alt="" />
           </div>
         </div>
         <div className="right">

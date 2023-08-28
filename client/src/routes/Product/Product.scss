@@ -5,6 +5,13 @@
     margin: 80px 80px 80px 80px;
     gap: 8rem;
 
+    .product-description {
+        position: sticky;
+        top: 30px; 
+        max-height: calc(100vh - 80px); 
+        overflow-y: auto; 
+    }
+
     .first-section {
         display: flex;
         flex-direction: row;
@@ -15,7 +22,7 @@
             flex: 1;
 
             .images {
-                display: flex;
+              
 
                 img {
                     height: 790px;
@@ -112,7 +119,6 @@
 
             h1 {
                 font-size: 40px;
-
             }
 
             .product-text {
