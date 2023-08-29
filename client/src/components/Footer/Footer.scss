@@ -33,6 +33,7 @@
 
             .item{
                 width: 145px;
+                cursor: pointer;
             }
         }
 
@@ -53,7 +54,7 @@
             span{
                margin-bottom: 5px;
                font-size: 13px;
-               font-family: "Courier Prime", monospace;
+               font-family: "Inconsolata", monospace;
             }
         }
     }

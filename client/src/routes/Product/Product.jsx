@@ -27,7 +27,7 @@ const Product = () => {
         </div>
         <div className="right">
           <div className="product-description">
-            <h1>Description</h1>
+            <h1>Title</h1>
             <p className="product-price">$149.00</p>
             <p className="product-text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id

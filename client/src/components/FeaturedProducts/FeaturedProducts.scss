@@ -3,7 +3,7 @@
     align-items: flex-start;
     justify-content: space-between;
     margin: 50px;
-    margin: 80px 50px 80px 50px;
+    margin: 90px 50px 90px 50px;
 
     .left{
         flex: 1;
@@ -18,10 +18,16 @@
             border-top: 1px solid black;
             width: 100%;
             margin-bottom: 20px;
+            margin-top: 0;
         }
 
         h1{
             margin: 0;
+            min-width: 25rem;
+            font-family: "Archivo";
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
         }
      
         .shop-btn{
@@ -31,9 +37,10 @@
             a{
                 text-decoration: none;
                 color: #000;
-                border: 2px solid #000;
+                border: 1.5px solid #000;
                 padding: 15px 30px 15px 30px;
                 font-size: 20px;
+                font-family: "Inconsolata";
             }
         }
     }

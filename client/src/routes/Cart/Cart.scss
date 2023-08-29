@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 50px 50px 50px 50px;
-    gap: 30px;
+    gap: 50px;
 
     hr {
         border: none;
@@ -46,15 +46,16 @@
 
             p {
                 margin: 0;
-                font-family: "Courier Prime";
+                font-family: "Inconsolata";
                 font-size: 25px;
             }
 
             span {
-                font-family: "Courier Prime";
+                font-family: "Inconsolata";
                 text-transform: uppercase;
                 font-size: 15px;
                 color: gray;
+                font-weight: 300;
             }
         }
 
@@ -82,7 +83,8 @@
                 margin: 0;
                 font-size: 18px;
                 line-height: 25px;
-                font-family: "Courier Prime";
+                font-family: "Inconsolata";
+                font-weight: 300;
             }
         }
 
@@ -90,8 +92,9 @@
             display: flex;
             margin-right: 20px;
             flex-grow: 0;
-            font-family: "Courier Prime";
-         
+            font-family: "Inconsolata";
+        
+            font-weight: 300;
             font-size: 18px;
             line-height: 25px;
 
@@ -115,8 +118,6 @@
         flex-direction: column;
         align-items: flex-end;
 
-
-
         .total {
             display: flex;
             flex-direction: row;
@@ -124,6 +125,7 @@
             align-items: center;
 
             p {
+                font-family: "Inconsolata";
                 font-size: 25px;
                 margin: 0;
             }
@@ -132,11 +134,12 @@
                 display: flex;
                 justify-content: flex-end;
                 font-size: 20px;
+                font-family: "Inconsolata";
             }
         }
 
         .checkout {
-            font-family: "Barlow";
+            font-family: "Inconsolata";
             width: 25rem;
             padding: 15px;
             margin-top: 20px;
@@ -144,7 +147,7 @@
             background-color: #000;
             border: none;
             font-weight: 800;
-            font-size: 15px;
+            font-size: 15px;cursor: pointer;
         }
     }
 }

@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin: 50px 0px 50px 0px;
+    margin: 80px 0px 80px 0px;
 
     p{
         text-align: center;
@@ -12,10 +12,13 @@
         // margin-top: 5rem;
         font-size: 15px;
         // margin-bottom: 30px;
+        font-family: "Inconsolata";
+        line-height: 20px;
+        
     }
     
     .about-link{
-        border: 2px solid #000;
+        border: 1.5px solid #000;
         color: #000;
         text-decoration: none;
         padding: 15px 40px 15px 40px;
@@ -23,6 +26,7 @@
         font-size: 20px;
         justify-content: center;
         align-items: center;
+        font-family: "Inconsolata";
     }
     
 }

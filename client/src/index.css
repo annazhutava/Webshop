@@ -7,5 +7,6 @@ body {
   margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
-  font-family: "Archivo", sans-serif, "Courier Prime", monospace;
+  font-family: "Archivo", sans-serif, "Barlow", sans-serif, "Inconsolata",
+    monospace;
 }
