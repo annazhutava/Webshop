@@ -8,6 +8,7 @@ import Product from "./routes/Product/Product.jsx";
 import NotFound from "./routes/NotFound/NotFound.jsx";
 import Products from "./routes/Products/Products.jsx";
 import About from "./routes/About/About.jsx";
+import Contact from "./routes/Contact/Contact.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="products/:category" element={<Products />} />
           <Route path="product/:id" element={<Product />} />
           <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
