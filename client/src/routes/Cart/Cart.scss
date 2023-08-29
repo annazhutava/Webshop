@@ -1,0 +1,150 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px 50px 50px;
+    gap: 30px;
+
+    hr {
+        border: none;
+        border-top: 1px solid lightgray;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: "Archivo";
+        font-weight: 900;
+        font-size: 35px;
+        letter-spacing: -2px;
+        color: #28282A;
+    }
+
+    .top {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .image {
+            display: flex;
+            flex-grow: 0;
+
+            img {
+                height: 200px;
+                width: 140px;
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin-left: 20px;
+            gap: 10px;
+
+            p {
+                margin: 0;
+                font-family: "Courier Prime";
+                font-size: 25px;
+            }
+
+            span {
+                font-family: "Courier Prime";
+                text-transform: uppercase;
+                font-size: 15px;
+                color: gray;
+            }
+        }
+
+        .quantity {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 15px;
+
+            .increase,
+            .decrease {
+                display: flex;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                background-color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                font-size: 18px;
+                line-height: 25px;
+                font-family: "Courier Prime";
+            }
+        }
+
+        .price {
+            display: flex;
+            margin-right: 20px;
+            flex-grow: 0;
+            font-family: "Courier Prime";
+         
+            font-size: 18px;
+            line-height: 25px;
+
+        }
+
+        .remove-btn {
+            display: flex;
+            flex-grow: 0;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+
+
+        .total {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-size: 25px;
+                margin: 0;
+            }
+
+            .subtotal {
+                display: flex;
+                justify-content: flex-end;
+                font-size: 20px;
+            }
+        }
+
+        .checkout {
+            font-family: "Barlow";
+            width: 25rem;
+            padding: 15px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            font-weight: 800;
+            font-size: 15px;
+        }
+    }
+}

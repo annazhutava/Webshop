@@ -46,10 +46,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-right">
-          <div className="cart-icon">
+          <NavLink className="cart-icon" to="/cart">
             <ShoppingCartOutlinedIcon fontSize="small" />
             <span>0</span>
-          </div>
+          </NavLink>
         </div>
       </div>
     </div>
