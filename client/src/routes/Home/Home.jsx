@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Slider />
       <IntroSection />
-      <FeaturedProducts />
+      <FeaturedProducts type="featured" />
     </div>
   );
 };
