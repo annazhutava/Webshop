@@ -1,38 +1,29 @@
-import Product1 from "../../assets/featured-product-1.jpg";
-import Product2 from "../../assets/featured-product-2.jpg";
-import Product3 from "../../assets/featured-product-3.jpg";
 import Card from "../Card/Card";
 import "../List/List.scss";
+import useFetch from "../../hooks/useFetch";
 
 const List = ({ selectedCategory }) => {
-  const data = [
-    {
-      id: 1,
-      img: Product1,
-      category: "accessories",
-    },
-    {
-      id: 2,
-      img: Product2,
-      category: "tops",
-    },
-    {
-      id: 3,
-      img: Product3,
-      category: "tops",
-    },
-  ];
+  const { data, loading, error } = useFetch("/products?populate=*");
 
   const filteredData =
     selectedCategory === "all"
       ? data
-      : data.filter((item) => item.category === selectedCategory);
+      : data.filter((item) => {
+          const categories = item.attributes.categories.data;
+          return categories.some(
+            (category) => category.attributes.title === selectedCategory
+          );
+        });
+
+  console.log(filteredData);
 
   return (
     <div className="list">
-      {filteredData.map((item) => (
-        <Card key={item.id} item={item} />
-      ))}
+      {error
+        ? "Something went wrong!"
+        : loading
+        ? "Loading..."
+        : filteredData.map((item) => <Card key={item.id} item={item} />)}
     </div>
   );
 };
