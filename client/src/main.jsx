@@ -10,21 +10,25 @@ import Products from "./routes/Products/Products.jsx";
 import About from "./routes/About/About.jsx";
 import Contact from "./routes/Contact/Contact.jsx";
 import Cart from "./routes/Cart/Cart.jsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="products/:category" element={<Products />} />
-          <Route path="product/:id" element={<Product />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path="products/:category" element={<Products />} />
+            <Route path="product/:id" element={<Product />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

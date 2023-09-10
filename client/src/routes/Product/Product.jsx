@@ -2,11 +2,12 @@ import "../Product/Product.scss";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 
 const Product = () => {
   const productId = useParams().id;
-
-  console.log(productId);
+  const dispatch = useDispatch();
 
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedQuantity, setSelectedQuantity] = useState(1);
@@ -88,7 +89,24 @@ const Product = () => {
                   />
                 </div>
                 <div className="cart-btn">
-                  <button>Add to cart</button>
+                  <button
+                    onClick={() =>
+                      dispatch(
+                        addToCart({
+                          id: data.id,
+                          title: data.attributes.title,
+                          price: data.attributes.price,
+                          img:
+                            import.meta.env.VITE_REACT_APP_API_UPLOAD_URL +
+                            data.attributes?.image?.data?.attributes?.url,
+                          selectedQuantity,
+                          selectedSize,
+                        })
+                      )
+                    }
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
