@@ -3,7 +3,11 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import "../Cart/Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItem } from "../../redux/cartReducer";
+import {
+  decreaseQuantity,
+  increaseQuantity,
+  removeItem,
+} from "../../redux/cartReducer";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -31,12 +35,18 @@ const Cart = () => {
             <span>Size: {item.selectedSize}</span>
           </div>
           <div className="quantity">
-            <button className="decrease">
+            <button
+              className="decrease"
+              onClick={() => dispatch(decreaseQuantity({ id: item.id }))}
+            >
               <RemoveIcon />
             </button>
             <span>{item.selectedQuantity}</span>
 
-            <button className="increase">
+            <button
+              className="increase"
+              onClick={() => dispatch(increaseQuantity({ id: item.id }))}
+            >
               <AddIcon />
             </button>
           </div>

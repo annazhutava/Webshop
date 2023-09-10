@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "../Navbar/Navbar.scss";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const products = useSelector((state) => state.cart.products);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -48,7 +51,7 @@ const Navbar = () => {
         <div className="navbar-right">
           <NavLink className="cart-icon" to="/cart">
             <ShoppingCartOutlinedIcon fontSize="small" />
-            <span>0</span>
+            <span>{products.length}</span>
           </NavLink>
         </div>
       </div>
