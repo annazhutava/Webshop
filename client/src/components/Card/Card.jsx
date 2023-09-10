@@ -4,7 +4,7 @@ import "../Card/Card.scss";
 
 const Card = ({ item }) => {
   return (
-    <Link to={`/product/${item.id}`}>
+    <Link to={`/product/${item.id}`} className="card-link">
       <div className="card">
         <img
           src={
@@ -13,6 +13,10 @@ const Card = ({ item }) => {
           }
           alt=""
         />
+        <div className="product-info">
+          <p>{item.attributes?.title}</p>
+          <span>${item.attributes?.price}.00</span>
+        </div>
       </div>
     </Link>
   );

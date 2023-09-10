@@ -2,8 +2,28 @@
     display: flex;
     flex-direction: column;
     // justify-content: center;
-    margin: 80px 80px 80px 80px;
-    gap: 8rem;
+    margin: 50px 80px 80px 80px;
+    gap: 5rem;
+
+    .product-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-family: "Inconsolata";
+            font-size: 15px;
+        }
+
+        span{
+            font-size: 12px;
+            display: flex;
+            align-self: center;
+          
+        }
+    }
 
     .product-description {
         position: sticky;
@@ -35,6 +55,7 @@
             display: flex;
             justify-content: flex-end;
 
+
             h1 {
                 font-size: 40px;
                 font-family: "Archivo";
@@ -54,12 +75,14 @@
                 font-size: 15px;
                 line-height: 25px;
                 font-family: "Inconsolata";
+                margin-bottom: 30px;
             }
 
             .size-selection {
                 display: flex;
                 flex-direction: column;
                 // width: 15rem;
+                margin-bottom: 25px;
                 gap: 10px;
 
                 label {

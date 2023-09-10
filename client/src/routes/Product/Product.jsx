@@ -35,6 +35,11 @@ const Product = () => {
         "Something went wrong..."
       ) : (
         <>
+          <div className="product-nav">
+            <a href="/products/all">Shop</a>
+            <span>&gt;</span>
+            <a href={`/product/${productId}`}>{data?.attributes?.title}</a>
+          </div>
           <div className="first-section">
             <div className="left">
               <div className="images">
@@ -57,7 +62,7 @@ const Product = () => {
             <div className="right">
               <div className="product-description">
                 <h1>{data?.attributes?.title}</h1>
-                <p className="product-price">${data?.attributes?.price}</p>
+                <p className="product-price">${data?.attributes?.price}.00</p>
                 <p className="product-text">{data?.attributes?.description}</p>
                 <div className="size-selection">
                   <label htmlFor="size">Size:</label>
