@@ -25,8 +25,8 @@ const Cart = () => {
   return (
     <div className="cart">
       <h1>Shopping Cart</h1>
-      {products?.map((item) => (
-        <div className="top" key={item.id}>
+      {products?.map((item, index) => (
+        <div className="top" key={`${item.id}-${item.selectedSize}-${index}`}>
           <div className="image">
             <img src={item.img} alt="" />
           </div>
@@ -37,7 +37,14 @@ const Cart = () => {
           <div className="quantity">
             <button
               className="decrease"
-              onClick={() => dispatch(decreaseQuantity({ id: item.id }))}
+              onClick={() =>
+                dispatch(
+                  decreaseQuantity({
+                    id: item.id,
+                    selectedSize: item.selectedSize,
+                  })
+                )
+              }
             >
               <RemoveIcon />
             </button>
@@ -45,7 +52,14 @@ const Cart = () => {
 
             <button
               className="increase"
-              onClick={() => dispatch(increaseQuantity({ id: item.id }))}
+              onClick={() =>
+                dispatch(
+                  increaseQuantity({
+                    id: item.id,
+                    selectedSize: item.selectedSize,
+                  })
+                )
+              }
             >
               <AddIcon />
             </button>
@@ -53,7 +67,11 @@ const Cart = () => {
           <div className="price">${item.price}.00</div>
           <button
             className="remove-btn"
-            onClick={() => dispatch(removeItem(item.id))}
+            onClick={() =>
+              dispatch(
+                removeItem({ id: item.id, selectedSize: item.selectedSize })
+              )
+            }
           >
             <ClearIcon />
           </button>
