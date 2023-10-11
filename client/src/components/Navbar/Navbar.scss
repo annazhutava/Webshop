@@ -1,45 +1,44 @@
-.navbar{
+.navbar {
     height: 70px;
     border-bottom: 1px solid black;
 
-    .wrapper{
+    .wrapper {
         padding: 25px 40px;
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;
 
         .item {
             display: flex;
             font-size: 15px;
             align-items: center;
-           
-     
         }
-    
-        .navbar-left{
+
+        .navbar-left {
             display: flex;
             align-items: center;
-            gap: 20px;
             flex: 1;
         }
 
-        .navbar-center{
+        .navbar-center {
             display: flex;
             align-items: center;
             justify-content: center;
+    
             flex: 1;
         }
-        
-        .navbar-right{
+
+        .navbar-right {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             flex: 1;
 
-            .cart-icon{
+            .cart-icon {
                 position: relative;
                 color: black;
+                margin-top: 2px;
 
-                span{
+                span {
                     position: absolute;
                     border-radius: 50%;
                     height: 20px;
@@ -56,16 +55,98 @@
             }
         }
 
-        .nav-link{
+        .nav-link {
             color: black;
             text-decoration: none;
             font-family: "Inconsolata";
         }
 
-        .activated{
+        .activated {
             text-decoration: underline;
         }
+    }
+}
 
-        
+.desktop-nav {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mobile-menu {
+        display: none;
+        /* Hide the mobile menu by default */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 1;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 20px;
+        height: 100vh;
+        padding-top: 10rem;
+
+        .item {
+            margin-bottom: 15px;
+
+            .nav-link{
+                font-size: 30px;
+            }
+
+            .activated {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .mobile-hamburger-btn {
+        height: 20px;
+        width: 20px;
+        border: none;
+        background-color: #fff;
+        font-size: 13px;
+        right: -14px;
+        top: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-close-btn {
+        height: 20px;
+        width: 20px;
+        border: none;
+        background-color: #fff;
+        font-size: 13px;
+        right: -14px;
+        top: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .mobile-hamburger-btn,
+    .mobile-close-btn,
+    .mobile-menu.open,
+    .mobile-menu {
+        display: none;
     }
 }

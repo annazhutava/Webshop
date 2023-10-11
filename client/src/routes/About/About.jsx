@@ -1,14 +1,19 @@
 import "../About/About.scss";
-// import Image1 from "../../assets/about-img1.jpg";
 import Image2 from "../../assets/about-img2.jpg";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to the top of the page when the location changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="about">
       <div className="top">
-        {/* <div className="image">
-          <img src={Image1} alt="" />
-        </div> */}
         <h1>About us</h1>
       </div>
       <div className="bottom">

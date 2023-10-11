@@ -1,4 +1,5 @@
 import "./IntroSection.scss";
+import { Link } from "react-router-dom";
 
 const IntroSection = () => {
   return (
@@ -8,9 +9,9 @@ const IntroSection = () => {
         nostrum fugiat, culpa officia, quod iusto corporis dolorem consectetur
         dicta quaerat repellendus vel optio fugit sed in! Delectus, quam velit.
       </p>
-      <a className="about-link" href="/about">
+      <Link className="about-link" to="/about">
         Our Story
-      </a>
+      </Link>
     </div>
   );
 };
