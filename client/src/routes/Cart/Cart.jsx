@@ -77,7 +77,7 @@ const Cart = () => {
           </button>
         </div>
       ))}
-      <hr />
+
       <div className="bottom">
         <div className="cart-summary">
           <div className="total">

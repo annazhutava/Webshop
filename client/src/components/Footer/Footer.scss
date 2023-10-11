@@ -1,4 +1,4 @@
-.footer{
+.footer {
     padding: 50px;
     background-color: #28282A;
     // position: fixed;
@@ -6,43 +6,43 @@
     width: 100%;
 
 
-    .wrapper{
+    .wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: center;     
+        align-items: center;
 
-        .left{
+        .left {
             flex: 1;
 
-            span{
+            span {
                 max-width: 20rem;
                 line-height: 18px;
             }
         }
 
-        .right{
+        .right {
             flex: 1;
             display: flex;
             justify-content: flex-end;
             gap: 3rem;
 
-            span{
+            span {
                 text-decoration: underline;
                 text-underline-offset: 3.13px;
             }
 
-            .item{
+            .item {
                 width: 145px;
                 cursor: pointer;
             }
         }
 
-        .item{
+        .item {
             display: flex;
             flex-direction: column;
             color: #ececec;
 
-            p{
+            p {
                 margin-bottom: 20px;
                 font-family: "Archivo", sans-serif;
                 font-size: 14px;
@@ -51,10 +51,34 @@
                 text-transform: uppercase;
             }
 
-            span{
-               margin-bottom: 5px;
-               font-size: 13px;
-               font-family: "Inconsolata", monospace;
+            span {
+                margin-bottom: 5px;
+                font-size: 13px;
+                font-family: "Inconsolata", monospace;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            gap: 2rem;
+
+            .left {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .right {
+
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 1rem;
             }
         }
     }

@@ -7,13 +7,13 @@ const Products = () => {
   const { category } = useParams();
   const { data, loading, error } = useFetch(`/categories?populate=*`);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (error) {
-    return <div>Something went wrong!</div>;
-  }
+  // if (error) {
+  //   return <div>Something went wrong!</div>;
+  // }
 
   return (
     <div className="products">
@@ -25,17 +25,21 @@ const Products = () => {
           >
             All
           </Link>
-          {data.map((item) => (
-            <Link
-              className={`category-link ${
-                category === item.attributes.title ? "selected" : ""
-              }`}
-              key={item.id}
-              to={`/products/${item.attributes.title}`}
-            >
-              {item.attributes.title}
-            </Link>
-          ))}
+          {error
+            ? "Something went wrong!"
+            : loading
+            ? "Loading..."
+            : data.map((item) => (
+                <Link
+                  className={`category-link ${
+                    category === item.attributes.title ? "selected" : ""
+                  }`}
+                  key={item.id}
+                  to={`/products/${item.attributes.title}`}
+                >
+                  {item.attributes.title}
+                </Link>
+              ))}
         </div>
       </div>
       <div className="right">

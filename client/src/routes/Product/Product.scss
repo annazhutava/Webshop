@@ -57,7 +57,7 @@
 
 
             h1 {
-                font-size: 40px;
+                font-size: 35px;
                 font-family: "Archivo";
                 letter-spacing: -2px;
                 font-weight: 900;
@@ -153,7 +153,7 @@
             justify-content: flex-start;
 
             h1 {
-                font-size: 40px;
+                font-size: 35px;
                 font-family: "Archivo";
                 text-transform: uppercase;
                 font-weight: 900;
@@ -178,6 +178,85 @@
                 img {
                     height: 790px;
                     width: 540px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+        margin: 40px 40px 40px 40px;
+        gap: 3rem;
+
+    
+        .first-section {
+            flex-direction: column;
+    
+            .left {          
+                .images {
+    
+                    img {
+                        height: 120vw;
+                        width: 80vw;
+                    }
+                }
+            }
+
+            .right{
+                justify-content: center;
+                align-items: center;
+
+                h1{
+                    font-size: 30px;
+                    letter-spacing: -1.5px;
+                }
+
+                .product-price {
+                    font-size: 20px;
+                }
+
+                .cart-btn {
+                    display: flex;
+    
+                    button {
+                        width: 80vw;
+                    }
+                }
+
+                .size-selection {
+
+                    select {
+                        width: 78vw;
+                    }
+                }
+            }
+        }
+
+        .second-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .left {
+                display: flex;
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+
+            .right {
+                display: flex;
+                justify-content: center;
+    
+                .image {
+    
+                    img {
+                        height: 120vw;
+                        width: 80vw;
+                    }
                 }
             }
         }

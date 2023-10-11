@@ -1,4 +1,4 @@
-.homepage-description{
+.homepage-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +6,7 @@
     gap: 15px;
     margin: 80px 0px 80px 0px;
 
-    p{
+    p {
         text-align: center;
         max-width: 40rem;
         // margin-top: 5rem;
@@ -14,10 +14,10 @@
         // margin-bottom: 30px;
         font-family: "Inconsolata";
         line-height: 20px;
-        
+
     }
-    
-    .about-link{
+
+    .about-link {
         border: 1.5px solid #000;
         color: #000;
         text-decoration: none;
@@ -28,5 +28,16 @@
         align-items: center;
         font-family: "Inconsolata";
     }
-    
+
+}
+
+@media screen and (max-width: 768px) {
+    .homepage-description {
+        margin: 70px 40px 70px 40px;
+
+        p {
+            max-width: 20rem;
+            margin-bottom: 30px;
+        }
+    }
 }

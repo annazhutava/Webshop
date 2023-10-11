@@ -1,14 +1,14 @@
 import "../About/About.scss";
-import Image1 from "../../assets/about-img1.jpg";
+// import Image1 from "../../assets/about-img1.jpg";
 import Image2 from "../../assets/about-img2.jpg";
 
 const About = () => {
   return (
     <div className="about">
       <div className="top">
-        <div className="image">
+        {/* <div className="image">
           <img src={Image1} alt="" />
-        </div>
+        </div> */}
         <h1>About us</h1>
       </div>
       <div className="bottom">

@@ -2,11 +2,11 @@
     text-decoration: none;
 
 
-
     .card{
         display: flex;
         flex-direction: column;
         gap: 10px;
+   
        
         img{
             height: 360px;
@@ -28,6 +28,18 @@
             span{
                 font-family: "Inconsolata";
                 font-weight: 800;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .card-link{
+        .card{
+            img{
+                height: 430px;
+                width: 295px;
             }
         }
     }

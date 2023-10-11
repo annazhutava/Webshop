@@ -15,8 +15,6 @@ const List = ({ selectedCategory }) => {
           );
         });
 
-  console.log(filteredData);
-
   return (
     <div className="list">
       {error

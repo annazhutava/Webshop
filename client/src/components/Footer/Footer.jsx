@@ -19,6 +19,7 @@ const Footer = () => {
           <div className="item">
             <p>Title</p>
             <span>Shop</span>
+            <span>About</span>
             <span>Contact</span>
           </div>
           <div className="item">

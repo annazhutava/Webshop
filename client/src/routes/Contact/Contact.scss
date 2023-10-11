@@ -73,3 +73,25 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .contact-page {
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px 40px 40px 40px;
+
+        .left{
+
+            h1{
+                font-size: 30px;
+                letter-spacing: -2px;
+            }
+
+            .contact-section {
+                gap: 30px;
+            }
+            
+        }
+    }
+}
