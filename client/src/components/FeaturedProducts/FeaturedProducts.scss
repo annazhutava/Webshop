@@ -1,40 +1,35 @@
-.featured-products{
+.featured-products {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 50px;
-    margin: 90px 50px 90px 50px;
+    margin: 80px 50px 80px 50px;
 
-    .left{
-        flex: 1;
+    .left {
+        flex: 2;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
         gap: 10px;
 
-        hr{
+        hr {
             border: none;
             border-top: 1px solid black;
-            width: 100%;
-            margin-bottom: 20px;
-            margin-top: 0;
+            width: 90%;
+            margin: 0;
         }
 
-        h1{
-            margin: 0;
-            min-width: 25rem;
+        h1 {
             font-family: "Archivo";
+            font-size: 30px;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -2px;
         }
-     
-        .shop-btn{
+
+        .shop-btn {
             display: flex;
             margin-top: 40px;
 
-            a{
+            a {
                 text-decoration: none;
                 color: #000;
                 border: 1.5px solid #000;
@@ -45,11 +40,83 @@
         }
     }
 
-    .right{
+    .right {
         flex: 3;
         display: flex;
-        justify-content: flex-end;
         flex-direction: row;
         gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .featured-products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        margin: 80px 40px 80px 40px;
+
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            hr {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .featured {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+               
+                .title {
+
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+
+                .shop-btn {
+                    margin: 0;
+                    display: flex;
+
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        padding: 15px 40px 15px 40px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            .mobile-buttons {
+                display: flex;
+                justify-content: flex-end;
+
+                .mobile-button-prev-deactivated{
+                    color: #CCCCCC;
+                }
+
+                .mobile-button-next-deactivated{
+                    color: #CCCCCC;
+                }
+            }
+
+
+        }
     }
 }
