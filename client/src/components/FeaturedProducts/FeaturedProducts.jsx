@@ -60,7 +60,7 @@ const FeaturedProducts = ({ type }) => {
               <KeyboardArrowLeftIcon />
             </div>
           )) ||
-            (visibleCards === 0 && (
+            (isMobileView && visibleCards === 0 && (
               <div className="mobile-button-prev-deactivated">
                 <KeyboardArrowLeftIcon />
               </div>
